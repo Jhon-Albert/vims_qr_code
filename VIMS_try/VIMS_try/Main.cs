@@ -17,6 +17,14 @@ namespace VIMS_try
             InitializeComponent();
             Dashboard dashboard = new Dashboard();
             addUserControl(dashboard);
+
+            AddButtonEffects(btn_logs);
+            AddButtonEffects(btn_info);
+            AddButtonEffects(btn_notification);
+            AddButtonEffects(btn_logout);
+            AddButtonEffects(btn_blacklist);
+            AddButtonEffects(btn_scan);
+
         }
 
         private void addUserControl(UserControl userControl)
@@ -27,7 +35,15 @@ namespace VIMS_try
             userControl.BringToFront();
 
         }
+        private void AddButtonEffects(Button button)
+        {
+            button.MouseEnter += (sender, e) => button.BackColor = Color.LightBlue;
+            button.MouseLeave += (sender, e) => button.BackColor = SystemColors.Control;
+            button.MouseDown += (sender, e) => button.BackColor = Color.LightGreen;
+            button.MouseUp += (sender, e) => button.BackColor = Color.LightBlue;
+        }
 
+        //BUTTONS
         private void button1_Click(object sender, EventArgs e)
         {
             Dashboard uc = new Dashboard();
@@ -65,6 +81,11 @@ namespace VIMS_try
         {
             Blacklist uc = new Blacklist();
             addUserControl(uc);
+        }
+
+        private void btn_scan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace VIMS_try
 {
-    partial class Main
+    partial class AdminMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            panel1 = new Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMain));
             lbl_name = new Label();
             pbClose = new PictureBox();
+            panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            btn_scan = new Button();
             btn_logout = new Button();
             btn_blacklist = new Button();
             btn_notification = new Button();
@@ -41,23 +42,10 @@
             btn_logs = new Button();
             button1 = new Button();
             pnlContainer = new Panel();
-            btn_scan = new Button();
-            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbClose).BeginInit();
+            panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.MenuHighlight;
-            panel1.Controls.Add(lbl_name);
-            panel1.Controls.Add(pbClose);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(966, 47);
-            panel1.TabIndex = 0;
             // 
             // lbl_name
             // 
@@ -65,9 +53,9 @@
             lbl_name.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbl_name.Location = new Point(855, 18);
             lbl_name.Name = "lbl_name";
-            lbl_name.Size = new Size(75, 20);
+            lbl_name.Size = new Size(53, 20);
             lbl_name.TabIndex = 4;
-            lbl_name.Text = "Employee";
+            lbl_name.Text = "Admin";
             lbl_name.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pbClose
@@ -79,6 +67,18 @@
             pbClose.SizeMode = PictureBoxSizeMode.Zoom;
             pbClose.TabIndex = 3;
             pbClose.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.MenuHighlight;
+            panel1.Controls.Add(lbl_name);
+            panel1.Controls.Add(pbClose);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(966, 47);
+            panel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -104,7 +104,16 @@
             panel2.Location = new Point(0, 47);
             panel2.Name = "panel2";
             panel2.Size = new Size(185, 464);
-            panel2.TabIndex = 1;
+            panel2.TabIndex = 2;
+            // 
+            // btn_scan
+            // 
+            btn_scan.Location = new Point(2, 242);
+            btn_scan.Name = "btn_scan";
+            btn_scan.Size = new Size(180, 38);
+            btn_scan.TabIndex = 6;
+            btn_scan.Text = "Real Time Tracking";
+            btn_scan.UseVisualStyleBackColor = true;
             // 
             // btn_logout
             // 
@@ -122,9 +131,8 @@
             btn_blacklist.Name = "btn_blacklist";
             btn_blacklist.Size = new Size(180, 38);
             btn_blacklist.TabIndex = 4;
-            btn_blacklist.Text = "Blacklist Visitors";
+            btn_blacklist.Text = "Blacklist Management";
             btn_blacklist.UseVisualStyleBackColor = true;
-            btn_blacklist.Click += btn_blacklist_Click;
             // 
             // btn_notification
             // 
@@ -132,9 +140,8 @@
             btn_notification.Name = "btn_notification";
             btn_notification.Size = new Size(180, 38);
             btn_notification.TabIndex = 3;
-            btn_notification.Text = "Notification";
+            btn_notification.Text = "Employee Management";
             btn_notification.UseVisualStyleBackColor = true;
-            btn_notification.Click += btn_notification_Click;
             // 
             // btn_info
             // 
@@ -142,9 +149,8 @@
             btn_info.Name = "btn_info";
             btn_info.Size = new Size(180, 38);
             btn_info.TabIndex = 2;
-            btn_info.Text = "Visitor Info";
+            btn_info.Text = "Visitor Reports";
             btn_info.UseVisualStyleBackColor = true;
-            btn_info.Click += btn_info_Click;
             // 
             // btn_logs
             // 
@@ -152,9 +158,8 @@
             btn_logs.Name = "btn_logs";
             btn_logs.Size = new Size(180, 38);
             btn_logs.TabIndex = 1;
-            btn_logs.Text = "Visitor Logs";
+            btn_logs.Text = "Visitor Management";
             btn_logs.UseVisualStyleBackColor = true;
-            btn_logs.Click += btn_logs_Click;
             // 
             // button1
             // 
@@ -164,7 +169,6 @@
             button1.TabIndex = 0;
             button1.Text = "Dashboard";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // pnlContainer
             // 
@@ -172,19 +176,9 @@
             pnlContainer.Location = new Point(189, 47);
             pnlContainer.Name = "pnlContainer";
             pnlContainer.Size = new Size(777, 464);
-            pnlContainer.TabIndex = 2;
+            pnlContainer.TabIndex = 3;
             // 
-            // btn_scan
-            // 
-            btn_scan.Location = new Point(2, 242);
-            btn_scan.Name = "btn_scan";
-            btn_scan.Size = new Size(180, 38);
-            btn_scan.TabIndex = 6;
-            btn_scan.Text = "Scan QR";
-            btn_scan.UseVisualStyleBackColor = true;
-            btn_scan.Click += btn_scan_Click;
-            // 
-            // Main
+            // AdminMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -192,30 +186,31 @@
             Controls.Add(pnlContainer);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "Main";
+            Name = "AdminMain";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Main";
+            Text = "AdminMain";
+            Load += AdminMain_Load;
+            ((System.ComponentModel.ISupportInitialize)pbClose).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbClose).EndInit();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
-        private Panel panel2;
-        private Button button1;
-        private Label label1;
-        private PictureBox pbClose;
         private Label lbl_name;
-        private Panel pnlContainer;
-        private Button btn_logs;
-        private Button btn_info;
-        private Button btn_notification;
+        private PictureBox pbClose;
+        private Panel panel1;
+        private Label label1;
+        private Panel panel2;
+        private Button btn_scan;
         private Button btn_logout;
         private Button btn_blacklist;
-        private Button btn_scan;
+        private Button btn_notification;
+        private Button btn_info;
+        private Button btn_logs;
+        private Button button1;
+        private Panel pnlContainer;
     }
 }

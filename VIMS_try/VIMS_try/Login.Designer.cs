@@ -28,28 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             txt_Email = new TextBox();
             txt_Password = new TextBox();
             button1 = new Button();
             cb_pass = new CheckBox();
+            rbtn_employee = new RadioButton();
+            rbtn_admin = new RadioButton();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Employee";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 46);
+            label2.Location = new Point(443, 198);
             label2.Name = "label2";
             label2.Size = new Size(39, 15);
             label2.TabIndex = 1;
@@ -58,7 +50,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 83);
+            label3.Location = new Point(423, 235);
             label3.Name = "label3";
             label3.Size = new Size(60, 15);
             label3.TabIndex = 2;
@@ -66,14 +58,14 @@
             // 
             // txt_Email
             // 
-            txt_Email.Location = new Point(78, 43);
+            txt_Email.Location = new Point(489, 195);
             txt_Email.Name = "txt_Email";
             txt_Email.Size = new Size(175, 23);
             txt_Email.TabIndex = 3;
             // 
             // txt_Password
             // 
-            txt_Password.Location = new Point(78, 80);
+            txt_Password.Location = new Point(489, 232);
             txt_Password.Name = "txt_Password";
             txt_Password.PasswordChar = '*';
             txt_Password.Size = new Size(175, 23);
@@ -81,7 +73,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(92, 147);
+            button1.Location = new Point(503, 299);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 5;
@@ -92,7 +84,7 @@
             // cb_pass
             // 
             cb_pass.AutoSize = true;
-            cb_pass.Location = new Point(78, 109);
+            cb_pass.Location = new Point(489, 261);
             cb_pass.Name = "cb_pass";
             cb_pass.Size = new Size(108, 19);
             cb_pass.TabIndex = 6;
@@ -100,33 +92,60 @@
             cb_pass.UseVisualStyleBackColor = true;
             cb_pass.CheckedChanged += cb_pass_CheckedChanged;
             // 
+            // rbtn_employee
+            // 
+            rbtn_employee.AutoSize = true;
+            rbtn_employee.BackColor = SystemColors.Control;
+            rbtn_employee.FlatStyle = FlatStyle.System;
+            rbtn_employee.Location = new Point(423, 135);
+            rbtn_employee.Name = "rbtn_employee";
+            rbtn_employee.Size = new Size(83, 20);
+            rbtn_employee.TabIndex = 7;
+            rbtn_employee.TabStop = true;
+            rbtn_employee.Text = "Employee";
+            rbtn_employee.UseVisualStyleBackColor = false;
+            // 
+            // rbtn_admin
+            // 
+            rbtn_admin.AutoSize = true;
+            rbtn_admin.FlatStyle = FlatStyle.System;
+            rbtn_admin.Location = new Point(570, 135);
+            rbtn_admin.Name = "rbtn_admin";
+            rbtn_admin.Size = new Size(67, 20);
+            rbtn_admin.TabIndex = 8;
+            rbtn_admin.TabStop = true;
+            rbtn_admin.Text = "Admin";
+            rbtn_admin.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1088, 508);
+            Controls.Add(rbtn_admin);
+            Controls.Add(rbtn_employee);
             Controls.Add(cb_pass);
             Controls.Add(button1);
             Controls.Add(txt_Password);
             Controls.Add(txt_Email);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login Form";
+            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private Label label3;
         private TextBox txt_Email;
         private TextBox txt_Password;
         private Button button1;
         private CheckBox cb_pass;
+        private RadioButton rbtn_employee;
+        private RadioButton rbtn_admin;
     }
 }

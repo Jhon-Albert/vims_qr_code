@@ -57,6 +57,9 @@ namespace VIMS_try
                 FinalFrame.Stop();
         }
 
-
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

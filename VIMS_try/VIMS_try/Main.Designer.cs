@@ -34,6 +34,7 @@
             pbClose = new PictureBox();
             label1 = new Label();
             panel2 = new Panel();
+            btn_scan = new Button();
             btn_logout = new Button();
             btn_blacklist = new Button();
             btn_notification = new Button();
@@ -41,7 +42,6 @@
             btn_logs = new Button();
             button1 = new Button();
             pnlContainer = new Panel();
-            btn_scan = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbClose).BeginInit();
             panel2.SuspendLayout();
@@ -106,8 +106,22 @@
             panel2.Size = new Size(185, 464);
             panel2.TabIndex = 1;
             // 
+            // btn_scan
+            // 
+            btn_scan.Image = (Image)resources.GetObject("btn_scan.Image");
+            btn_scan.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_scan.Location = new Point(2, 242);
+            btn_scan.Name = "btn_scan";
+            btn_scan.Size = new Size(180, 38);
+            btn_scan.TabIndex = 6;
+            btn_scan.Text = "Scan QR";
+            btn_scan.UseVisualStyleBackColor = true;
+            btn_scan.Click += btn_scan_Click;
+            // 
             // btn_logout
             // 
+            btn_logout.Image = (Image)resources.GetObject("btn_logout.Image");
+            btn_logout.ImageAlign = ContentAlignment.MiddleLeft;
             btn_logout.Location = new Point(2, 412);
             btn_logout.Name = "btn_logout";
             btn_logout.Size = new Size(180, 38);
@@ -118,6 +132,8 @@
             // 
             // btn_blacklist
             // 
+            btn_blacklist.Image = (Image)resources.GetObject("btn_blacklist.Image");
+            btn_blacklist.ImageAlign = ContentAlignment.MiddleLeft;
             btn_blacklist.Location = new Point(2, 198);
             btn_blacklist.Name = "btn_blacklist";
             btn_blacklist.Size = new Size(180, 38);
@@ -128,6 +144,8 @@
             // 
             // btn_notification
             // 
+            btn_notification.Image = (Image)resources.GetObject("btn_notification.Image");
+            btn_notification.ImageAlign = ContentAlignment.MiddleLeft;
             btn_notification.Location = new Point(2, 154);
             btn_notification.Name = "btn_notification";
             btn_notification.Size = new Size(180, 38);
@@ -138,6 +156,8 @@
             // 
             // btn_info
             // 
+            btn_info.Image = (Image)resources.GetObject("btn_info.Image");
+            btn_info.ImageAlign = ContentAlignment.MiddleLeft;
             btn_info.Location = new Point(2, 110);
             btn_info.Name = "btn_info";
             btn_info.Size = new Size(180, 38);
@@ -148,6 +168,8 @@
             // 
             // btn_logs
             // 
+            btn_logs.Image = (Image)resources.GetObject("btn_logs.Image");
+            btn_logs.ImageAlign = ContentAlignment.MiddleLeft;
             btn_logs.Location = new Point(2, 66);
             btn_logs.Name = "btn_logs";
             btn_logs.Size = new Size(180, 38);
@@ -158,6 +180,8 @@
             // 
             // button1
             // 
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.Location = new Point(2, 22);
             button1.Name = "button1";
             button1.Size = new Size(180, 38);
@@ -173,16 +197,6 @@
             pnlContainer.Name = "pnlContainer";
             pnlContainer.Size = new Size(777, 464);
             pnlContainer.TabIndex = 2;
-            // 
-            // btn_scan
-            // 
-            btn_scan.Location = new Point(2, 242);
-            btn_scan.Name = "btn_scan";
-            btn_scan.Size = new Size(180, 38);
-            btn_scan.TabIndex = 6;
-            btn_scan.Text = "Scan QR";
-            btn_scan.UseVisualStyleBackColor = true;
-            btn_scan.Click += btn_scan_Click;
             // 
             // Main
             // 

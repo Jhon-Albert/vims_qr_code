@@ -40,7 +40,7 @@
             btn_notification = new Button();
             btn_info = new Button();
             btn_logs = new Button();
-            button1 = new Button();
+            btn_dashboard = new Button();
             pnlContainer = new Panel();
             ((System.ComponentModel.ISupportInitialize)pbClose).BeginInit();
             panel1.SuspendLayout();
@@ -70,7 +70,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.MenuHighlight;
+            panel1.BackColor = Color.FromArgb(255, 255, 192);
             panel1.Controls.Add(lbl_name);
             panel1.Controls.Add(pbClose);
             panel1.Controls.Add(label1);
@@ -92,14 +92,14 @@
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.GradientInactiveCaption;
+            panel2.BackColor = Color.Beige;
             panel2.Controls.Add(btn_scan);
             panel2.Controls.Add(btn_logout);
             panel2.Controls.Add(btn_blacklist);
             panel2.Controls.Add(btn_notification);
             panel2.Controls.Add(btn_info);
             panel2.Controls.Add(btn_logs);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btn_dashboard);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 47);
             panel2.Name = "panel2";
@@ -117,6 +117,8 @@
             // 
             // btn_logout
             // 
+            btn_logout.Image = (Image)resources.GetObject("btn_logout.Image");
+            btn_logout.ImageAlign = ContentAlignment.MiddleLeft;
             btn_logout.Location = new Point(2, 412);
             btn_logout.Name = "btn_logout";
             btn_logout.Size = new Size(180, 38);
@@ -127,6 +129,8 @@
             // 
             // btn_blacklist
             // 
+            btn_blacklist.Image = (Image)resources.GetObject("btn_blacklist.Image");
+            btn_blacklist.ImageAlign = ContentAlignment.MiddleLeft;
             btn_blacklist.Location = new Point(2, 198);
             btn_blacklist.Name = "btn_blacklist";
             btn_blacklist.Size = new Size(180, 38);
@@ -136,7 +140,9 @@
             // 
             // btn_notification
             // 
-            btn_notification.Location = new Point(2, 154);
+            btn_notification.Image = (Image)resources.GetObject("btn_notification.Image");
+            btn_notification.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_notification.Location = new Point(2, 110);
             btn_notification.Name = "btn_notification";
             btn_notification.Size = new Size(180, 38);
             btn_notification.TabIndex = 3;
@@ -145,7 +151,9 @@
             // 
             // btn_info
             // 
-            btn_info.Location = new Point(2, 110);
+            btn_info.Image = (Image)resources.GetObject("btn_info.Image");
+            btn_info.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_info.Location = new Point(2, 154);
             btn_info.Name = "btn_info";
             btn_info.Size = new Size(180, 38);
             btn_info.TabIndex = 2;
@@ -154,6 +162,8 @@
             // 
             // btn_logs
             // 
+            btn_logs.Image = (Image)resources.GetObject("btn_logs.Image");
+            btn_logs.ImageAlign = ContentAlignment.MiddleLeft;
             btn_logs.Location = new Point(2, 66);
             btn_logs.Name = "btn_logs";
             btn_logs.Size = new Size(180, 38);
@@ -161,18 +171,20 @@
             btn_logs.Text = "Visitor Management";
             btn_logs.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_dashboard
             // 
-            button1.Location = new Point(2, 22);
-            button1.Name = "button1";
-            button1.Size = new Size(180, 38);
-            button1.TabIndex = 0;
-            button1.Text = "Dashboard";
-            button1.UseVisualStyleBackColor = true;
+            btn_dashboard.Image = (Image)resources.GetObject("btn_dashboard.Image");
+            btn_dashboard.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_dashboard.Location = new Point(2, 22);
+            btn_dashboard.Name = "btn_dashboard";
+            btn_dashboard.Size = new Size(180, 38);
+            btn_dashboard.TabIndex = 0;
+            btn_dashboard.Text = "Dashboard";
+            btn_dashboard.UseVisualStyleBackColor = true;
             // 
             // pnlContainer
             // 
-            pnlContainer.BackColor = SystemColors.GradientInactiveCaption;
+            pnlContainer.BackColor = Color.Beige;
             pnlContainer.Location = new Point(189, 47);
             pnlContainer.Name = "pnlContainer";
             pnlContainer.Size = new Size(777, 464);
@@ -210,7 +222,7 @@
         private Button btn_notification;
         private Button btn_info;
         private Button btn_logs;
-        private Button button1;
+        private Button btn_dashboard;
         private Panel pnlContainer;
     }
 }

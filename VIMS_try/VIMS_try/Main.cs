@@ -18,6 +18,7 @@ namespace VIMS_try
             Dashboard dashboard = new Dashboard();
             addUserControl(dashboard);
 
+            AddButtonEffects(button1);
             AddButtonEffects(btn_logs);
             AddButtonEffects(btn_info);
             AddButtonEffects(btn_notification);
@@ -39,7 +40,7 @@ namespace VIMS_try
         {
             button.MouseEnter += (sender, e) => button.BackColor = Color.LightBlue;
             button.MouseLeave += (sender, e) => button.BackColor = SystemColors.Control;
-            button.MouseDown += (sender, e) => button.BackColor = Color.LightGreen;
+            button.MouseDown += (sender, e) => button.BackColor = Color.LightBlue;
             button.MouseUp += (sender, e) => button.BackColor = Color.LightBlue;
         }
 
@@ -85,7 +86,8 @@ namespace VIMS_try
 
         private void btn_scan_Click(object sender, EventArgs e)
         {
-
+            ScanQR uc = new ScanQR();
+            uc.Show();
         }
     }
 }

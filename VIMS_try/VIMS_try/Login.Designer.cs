@@ -97,7 +97,8 @@
             rbtn_employee.AutoSize = true;
             rbtn_employee.BackColor = SystemColors.Control;
             rbtn_employee.FlatStyle = FlatStyle.System;
-            rbtn_employee.Location = new Point(423, 135);
+            rbtn_employee.ImageAlign = ContentAlignment.MiddleLeft;
+            rbtn_employee.Location = new Point(443, 135);
             rbtn_employee.Name = "rbtn_employee";
             rbtn_employee.Size = new Size(83, 20);
             rbtn_employee.TabIndex = 7;
@@ -122,8 +123,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1088, 508);
-            Controls.Add(rbtn_admin);
             Controls.Add(rbtn_employee);
+            Controls.Add(rbtn_admin);
             Controls.Add(cb_pass);
             Controls.Add(button1);
             Controls.Add(txt_Password);
